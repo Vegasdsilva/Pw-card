@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CadastrarProdutoComponent {
 
+  nome: string = '';
+  validade: string = '';
+  preco: number = 0;
+
+  ngOnInit(): void {}
+  salvarProduto(): void {
+    console.log('Nome: ', this.nome);
+    console.log('Validade: ', this.validade);
+    console.log('Preço: ', this.preco);
+    alert('Salvo com sucesso!');
+  }
 }
