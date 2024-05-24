@@ -4,6 +4,7 @@ import { IProduto } from '../Model/IProduto.model';
 import { ToastrService } from 'ngx-toastr';
 import { EMPTY, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment.prod';
 
 
 
@@ -11,7 +12,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProdutosService {
-  private URL: string = 'http://localhost:3000/produtos';
+  private URL: string = environment.URL;
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
